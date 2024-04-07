@@ -17,6 +17,7 @@ const SearchPage = async ({searchParams}: SearchPageProps) => {
     if (!userId) {
         return redirect("/")
     }
+
     const categories = await db.category.findMany({
         orderBy: {
             name: "asc"
